@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Flower, Amrita 💗😋</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #ffe6f2; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; overflow-x: hidden; }
+        .page { display: none; padding: 20px; }
+        .active { display: block; }
+        .btn { padding: 12px 25px; font-size: 18px; border-radius: 30px; border: none; cursor: pointer; margin: 5px; }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #6c757d; color: white; position: absolute; }
+        
+        .letter { background: white; padding: 50px; border-radius: 40px; max-width: 500px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px dashed #ff4d6d; }
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 400px; margin: 20px auto; }
+        .gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; }
+        
+        .playlist { background: white; padding: 20px; border-radius: 20px; width: 320px; margin: 20px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .song-item { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #ffe6f2; padding-bottom: 15px; }
+        .song-thumb { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4d6d; margin-bottom: 10px; }
+        audio { width: 100%; height: 40px; }
+        
+        .flowers { position: fixed; bottom: 0; width: 100%; height: 250px; background: url('') no-repeat bottom center; background-size: contain; z-index: 1; pointer-events: none; }
+        .content { position: relative; z-index: 2; padding-bottom: 150px; padding-top: 50px; }
+        
+        /* Floating Hearts Animation */
+        .heart { position: fixed; font-size: 20px; color: #ff4d6d; animation: float 4s linear infinite; z-index: 0; pointer-events: none; }
+        @keyframes float { 0% { transform: translateY(100vh); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <!-- Page 1 -->
+        <div id="page1" class="page active">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBvcmkwOWdrb2Rwem4xbm85NXByamk1dXpndnptZzdheTA3aXlnOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Zl7u48zLVFgLpRwq6f/giphy.gif">
+            <h1>Will you forever be mine, Amrita?🤌🏻😭💗</h1>
+            <button id="yesBtn" class="btn" onclick="showPage('page2')">Yes</button>
+            <button id="noBtn" class="btn" onmouseover="moveButton()">No</button>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" class="page">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZ1amhtOXY0YzE0aWQxcjN4eTF3ZG9wbmsya3l0cjlqZHE4MHh0cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qFmdpUKAFZ6rMobzzu/giphy.gif" width="150px">
+            <div class="letter">
+                <h2>My Babyyyy 😽💌</h2>
+                <p style="font-size: 20px;">Tumhe pata hai, tum meri life ka sabse khoobsurat hissa ho. Main bas tumhe ye batana chahta hoon ki tumne meri duniya ko kitna badal diya hai. Tumhare bina meri life ek aise song jaisi hai jismein koi sur hi nahi, aur tum usmein wahi pyaari si dhun ho jo mujhe har pal muskurane par majboor kar deti hai.🙈😸💗🫶🏻...Mujhe pata hai ki main kabhi-kabhi pareshan karta hoon, par trust me, tumse zyada pyaara aur kareeb mere liye koi nahi hai. Forever aur usse bhi aage tak, main sirf tumhara rehna chahta hoon.🥺🥹😚🫣..
+​I Love You more than words can ever express! 💗♾️🤌🏻💕💗💫✨🫶🏻</p>
+            </div>
+            <button class="btn" onclick="showPage('page1')">Back</button>
+            <button class="btn" onclick="showPage('page3')">Next</button>
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" class="page">
+            <h1>Your Sweet Sweet Pics Jannuuuuu😸😋🙈</h1>
+            <div class="gallery">
+                <img src="https://i.ibb.co/sYTxbK1/Snapchat-2052286974.jpg"><img src="https://i.ibb.co/svXkcLCC/Snapchat-1748489225.jpg"><img src="https://i.ibb.co/Tq2B5zZt/Snapchat-1532601333.jpg"><img src="https://i.ibb.co/zTvCgTVz/Snapchat-348670395.jpg"><img src="https://i.ibb.co/vvPYt9Yw/Snapchat-1073834728.jpg"><img src="https://i.ibb.co/LDsM34RM/Snapchat-638559450.jpg">
+            </div>
+            <button class="btn" onclick="showPage('page2')">Back</button>
+            <button class="btn" onclick="showPage('page4')">Next</button>
+        </div>
+        <!-- Page 4 -->
+        <div id="page4" class="page">
+            <h1>My Playlist for You 💕🫣🎵</h1>
+            <div class="playlist">
+                <!-- Song 1 -->
+                <div class="song-item">
+                    <img src="https://i.ibb.co/Dg7MR9t7/anime-boy-girl-couple-silhouette-background-hd-anime-couple-1600x900.jpg" class="song-thumb">
+                    <h3 style="margin: 5px 0;">ARZ KIYA HAI 🤌🏻💫✨🫶🏻</h3>
+                    <audio controls><source src="https://files.catbox.moe/pq1srw.mp3"></audio>
+                </div>
+                <!-- Song 2 -->
+                <div class="song-item">
+                    <img src="https://i.ibb.co/3m919c0s/valentines-day-girl-hugs-guy-couple-love-vector-cartoon-style-844724-2535.jpg" class="song-thumb">
+                    <h3 style="margin: 5px 0;">WILL YOU BE MINE?🤌🏻🥹😭💗</h3>
+                    <audio controls><source src="https://files.catbox.moe/py0973.mp3"></audio>
+                </div>
+                <!-- Song 3 -->
+                <div class="song-item">
+                    <img src="https://i.ibb.co/C5Vzzb0B/chibi-couple-kissing-hd-5adehb8ibmdlw6vz.jpg" class="song-thumb">
+                    <h3 style="margin: 5px 0;">QUEEN & POET 💞💕💗🫂</h3>
+                    <audio controls><source src="https://files.catbox.moe/6b29m4.mp3"></audio>
+                </div>
+            </div>
+            <button class="btn" onclick="showPage('page3')">Back</button>
+            <button class="btn" onclick="showPage('page5')">Next</button>
+        </div>
+
+        <!-- Page 5 -->
+        <div id="page5" class="page">
+            <h1 style="font-size: 50px; color: #ff4d6d;">💖 I LOVE YOUHH SOO MUCHH JANUUUU 💖</h1>
+            <p style="font-size: 24px; color: #555;">🥰💋 You are my forever & always!💗🫶🏻</p>
+            <button class="btn" onclick="showPage('page4')">Back</button>
+            <button class="btn" onclick="showPage('page1')">Restart with Love 💘</button>
+        </div>
+    </div>
+
+    <div class="flowers"></div>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            noBtn.style.left = (Math.random() * (window.innerWidth - 100)) + 'px';
+            noBtn.style.top = (Math.random() * (window.innerHeight - 100)) + 'px';
+        }
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+        // Heart Animation Script
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
